@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mocha Spec Runner</title>
+    <link href="../../js/specs/lib/mocha/mocha.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="../../js/specs/lib/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <!-- assertion framework -->
+    <script src="../../js/specs/lib/chai.js"></script>
+    <script>var expect = chai.expect;</script>
+
+    <script src="../../js/libs/jquery/jquery-2.0.3.js"></script>
+    <script src="../../js/libs/knockoutjs/knockout-2.3.0.js"></script>
+    <script src="../../js/libs/underscore/underscore.js"></script>
+    <script src="../../js/viewmodel/app.view.js"></script>
+
+    <script src="../../js/specs/spec/test.js"></script>
+
+    <script>mocha.run()</script>
+</body>
+</html>

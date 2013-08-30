@@ -140,15 +140,24 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
     <None Include="js\libs\jquery\jquery-2.0.3.intellisense.js" />
+    <Content Include="js\app.js" />
     <Content Include="js\libs\jquery\jquery-2.0.3.js" />
     <Content Include="js\libs\jquery\jquery-2.0.3.min.js" />
-    <Content Include="js\libs\backbonejs\backbone.js" />
-    <Content Include="js\libs\backbonejs\backbone.min.js" />
     <Content Include="js\libs\modernizr\modernizr-2.5.3.js" />
     <Content Include="js\libs\underscore\underscore.js" />
     <Content Include="js\libs\underscore\underscore.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="js\models\band.js" />
+    <Content Include="js\models\song.js" />
+    <Content Include="views\tests\index.html" />
+    <Content Include="js\specs\lib\chai.js" />
+    <Content Include="js\specs\lib\expect.js" />
+    <Content Include="js\specs\lib\mocha\mocha.css" />
+    <Content Include="js\specs\lib\mocha\mocha.js" />
+    <Content Include="js\specs\spec\test.js" />
+    <Content Include="js\utils\ko.bindingsHandlers.js" />
+    <Content Include="js\viewmodel\app.view.js" />
+    <Content Include="js\libs\knockoutjs\knockout-2.3.0.debug.js" />
+    <Content Include="js\libs\knockoutjs\knockout-2.3.0.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -162,7 +171,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\css\" />
-    <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
