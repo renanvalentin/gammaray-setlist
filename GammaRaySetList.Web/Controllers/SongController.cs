@@ -11,31 +11,49 @@ namespace GammaRaySetList.Web.Controllers
 {
     public class SongController : BaseApiController
     {
-        // GET api/values
+        public SongController(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        // GET api/song
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        // POST api/song
+        public HttpResponseMessage Post(Song song)
         {
-            return "value";
+            song.Band = _unitOfWork.Bands.GetById(song.Band.Id);
+
+            _unitOfWork.Songs.Add(song);
+            _unitOfWork.Commit();
+
+            var response = Request.CreateResponse(HttpStatusCode.Created, song);
+
+            response.Headers.Location =
+                new Uri(Url.Link(WebApiConfig.ControllerAndId, new { id = song.Id }));
+
+            return response;
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        // PUT api/song/5
+        public HttpResponseMessage Put(Song song)
         {
+            _unitOfWork.Songs.Update(song);
+            _unitOfWork.Commit();
+
+            return new HttpResponseMessage(HttpStatusCode.NoContent);
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        // DELETE api/song/5
+        public HttpResponseMessage Delete(int id)
         {
-        }
+            _unitOfWork.Songs.Delete(id);
+            _unitOfWork.Commit();
 
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            return new HttpResponseMessage(HttpStatusCode.NoContent);
         }
     }
 }

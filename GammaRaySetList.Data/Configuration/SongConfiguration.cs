@@ -12,16 +12,12 @@ namespace GammaRaySetList.Data
     {
         public SongConfiguration()
         {
-            this.HasKey(q => q.ID);
+            this.HasKey(q => q.Id);
 
-            this.Property(q => q.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(q => q.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             this.Property(q => q.Name).HasColumnType("varchar").HasMaxLength(30).IsRequired();
             this.Property(q => q.Listened).IsOptional();
-
-            this.HasRequired(q => q.Band)
-                .WithMany(q => q.Songs)
-                .Map(q => { q.MapKey("BandID"); });
 
             this.ToTable("Song");
         }

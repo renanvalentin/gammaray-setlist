@@ -7,6 +7,6 @@ namespace GammaRaySetlist.Model
 {
     public abstract class Entity
     {
-        public virtual long ID { get; set; }
+        public virtual int Id { get; set; }
     }
 }

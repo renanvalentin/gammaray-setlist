@@ -35,17 +35,7 @@ namespace GammaRaySetList.Data
                 },
 
                 new Band {
-                    Name = "Helloween",
-                    Songs = new List<Song> {
-                        new Song {
-                            Name = "Halloween",
-                            Listened = false
-                        },
-                        new Song {
-                            Name = "I Want Out",
-                            Listened = true
-                        }
-                    }
+                    Name = "Helloween"
                 }
             };
 

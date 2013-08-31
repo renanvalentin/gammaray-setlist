@@ -25,6 +25,8 @@ namespace GammaRaySetList.Web
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            GlobalConfig.CustomizeConfig(GlobalConfiguration.Configuration);
         }
     }
 }

@@ -7,10 +7,12 @@ namespace GammaRaySetList.Web
 {
     public static class WebApiConfig
     {
+        public static string ControllerAndId = "ApiControllerAndIntegerId";
+
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
+                name: ControllerAndId,
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );

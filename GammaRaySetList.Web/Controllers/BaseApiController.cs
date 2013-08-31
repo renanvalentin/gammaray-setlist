@@ -12,10 +12,5 @@ namespace GammaRaySetList.Web.Controllers
     public class BaseApiController : ApiController
     {
         protected IUnitOfWork _unitOfWork { get; set; }
-
-        public BaseApiController(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
     }
 }

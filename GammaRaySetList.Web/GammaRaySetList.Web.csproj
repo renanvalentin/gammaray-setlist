@@ -123,12 +123,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\GlobalConfig.cs" />
     <Compile Include="App_Start\IocConfig.cs" />
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectDependencyScope.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BandController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\LookupsController.cs" />
     <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -141,12 +143,15 @@
     <Content Include="assets\bootstrap\bootstrap.css" />
     <Content Include="assets\bootstrap\bootstrap.min.css" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\toastr\toastr.css" />
+    <Content Include="assets\toastr\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\toastr\toastr.less" />
     <None Include="js\libs\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="js\app.js" />
     <Content Include="js\libs\jquery\jquery-2.0.3.js" />
@@ -156,6 +161,9 @@
     <Content Include="js\libs\underscore\underscore.min.js" />
     <Content Include="js\models\band.js" />
     <Content Include="js\models\song.js" />
+    <Content Include="js\libs\toastr\toastr.js" />
+    <Content Include="js\libs\toastr\toastr.min.js" />
+    <Content Include="js\specs\lib\sinonjs\sinon-1.7.3.js" />
     <Content Include="views\tests\index.html" />
     <Content Include="js\specs\lib\chai.js" />
     <Content Include="js\specs\lib\expect.js" />

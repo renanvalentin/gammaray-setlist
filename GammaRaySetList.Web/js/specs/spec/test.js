@@ -2,6 +2,12 @@
 'use strict';
 (function () {
 
+    before(function () {
+        sinon.spy($, "ajax");
+        sinon.stub(toastr, 'success', function () { return true; });
+        sinon.stub(toastr, 'error', function () { return true; });
+    });
+
     describe('App ViewModel Tests', function () {
         it('bands should be greater than 0', function () {
             expect(app.viewModel.bands()).to.have.length.above(0);

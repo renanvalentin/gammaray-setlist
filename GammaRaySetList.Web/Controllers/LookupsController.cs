@@ -6,21 +6,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Data.Entity;
 
 namespace GammaRaySetList.Web.Controllers
 {
-    public class BandController : BaseApiController
+    public class LookupsController : BaseApiController
     {
-        public BandController(IUnitOfWork unitOfWork)
+        public LookupsController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        // GET api/band
+        // GET api/lookups
         public IEnumerable<Band> Get()
         {
-            return _unitOfWork.Bands.GetAll().Include("Songs");
+            return _unitOfWork.Bands.GetAll();
         }
     }
 }

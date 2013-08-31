@@ -5,6 +5,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/toastr/toastr.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Begin page content -->
@@ -23,11 +24,16 @@
             </div>
         </div>
         <div id="items" data-bind="foreach: bandList">
-            <div class="row">
+            <div class="row" data-bind="if: songs().length > 0">
                 <div class="col-md-12">
                     <h2 data-bind="text: name"></h2>
                     <div class="table-responsive">
                         <table class="table">
+                            <colgroup>
+                                <col width="70%" />
+                                <col width="15%" />
+                                <col width="15%" />
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>Song Name</th>
@@ -42,7 +48,7 @@
                                         <input type="checkbox" data-bind="checked: listened, click: $root.updateListened"/>
                                     </td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-danger btn-xs" data-bind="">
+                                        <button type="button" class="btn btn-danger btn-xs" data-bind="click: $root.destroy">
                                             <span class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </td>
@@ -58,6 +64,7 @@
     <script src="js/libs/underscore/underscore.js"></script>
     <script src="js/libs/knockoutjs/knockout-2.3.0.js"></script>
     <script src="js/utils/ko.bindingsHandlers.js"></script>
+    <script src="js/libs/toastr/toastr.js"></script>
     <script src="js/viewmodel/app.view.js"></script>
     <script src="js/app.js"></script>
 </body>
