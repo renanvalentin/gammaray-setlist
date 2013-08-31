@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GammaRaySetList.Web", "GammaRaySetList.Web\GammaRaySetList.Web.csproj", "{F7874AEB-BA49-4801-9F34-A674682724A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GammaRaySetList.Data", "GammaRaySetList.Data\GammaRaySetList.Data.csproj", "{209354BF-726A-45CF-A5C7-72D124CD0663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GammaRaySetlist.Model", "GammaRaySetlist.Model\GammaRaySetlist.Model.csproj", "{22B0CBF4-067E-443F-B81E-82186370B125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GammaRaySetList.Data.Contracts", "GammaRaySetList.Data.Contracts\GammaRaySetList.Data.Contracts.csproj", "{6B87975C-013D-4A1B-994C-A8657DC417C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{F7874AEB-BA49-4801-9F34-A674682724A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7874AEB-BA49-4801-9F34-A674682724A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7874AEB-BA49-4801-9F34-A674682724A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209354BF-726A-45CF-A5C7-72D124CD0663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209354BF-726A-45CF-A5C7-72D124CD0663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209354BF-726A-45CF-A5C7-72D124CD0663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209354BF-726A-45CF-A5C7-72D124CD0663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B0CBF4-067E-443F-B81E-82186370B125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B0CBF4-067E-443F-B81E-82186370B125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B0CBF4-067E-443F-B81E-82186370B125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B0CBF4-067E-443F-B81E-82186370B125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B87975C-013D-4A1B-994C-A8657DC417C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B87975C-013D-4A1B-994C-A8657DC417C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B87975C-013D-4A1B-994C-A8657DC417C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B87975C-013D-4A1B-994C-A8657DC417C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -120,8 +123,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IocConfig.cs" />
+    <Compile Include="App_Start\NinjectDependencyResolver.cs" />
+    <Compile Include="App_Start\NinjectDependencyScope.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\BandController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +182,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GammaRaySetList.Data.Contracts\GammaRaySetList.Data.Contracts.csproj">
+      <Project>{6b87975c-013d-4a1b-994c-a8657dc417c3}</Project>
+      <Name>GammaRaySetList.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GammaRaySetList.Data\GammaRaySetList.Data.csproj">
+      <Project>{209354bf-726a-45cf-a5c7-72d124cd0663}</Project>
+      <Name>GammaRaySetList.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GammaRaySetlist.Model\GammaRaySetlist.Model.csproj">
+      <Project>{22b0cbf4-067e-443f-b81e-82186370b125}</Project>
+      <Name>GammaRaySetlist.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

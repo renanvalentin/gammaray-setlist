@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{209354BF-726A-45CF-A5C7-72D124CD0663}</ProjectGuid>
+    <ProjectGuid>{6B87975C-013D-4A1B-994C-A8657DC417C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GammaRaySetList.Data</RootNamespace>
-    <AssemblyName>GammaRaySetList.Data</AssemblyName>
+    <RootNamespace>GammaRaySetList.Data.Contracts</RootNamespace>
+    <AssemblyName>GammaRaySetList.Data.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,23 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\BandConfiguration.cs" />
-    <Compile Include="GammaRayContext.cs" />
-    <Compile Include="GammaRayDatabaseInitializer.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Configuration\SongConfiguration.cs" />
-    <Compile Include="Repository.cs" />
-    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GammaRaySetList.Data.Contracts\GammaRaySetList.Data.Contracts.csproj">
-      <Project>{6b87975c-013d-4a1b-994c-a8657dc417c3}</Project>
-      <Name>GammaRaySetList.Data.Contracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GammaRaySetlist.Model\GammaRaySetlist.Model.csproj">
       <Project>{22b0cbf4-067e-443f-b81e-82186370b125}</Project>
       <Name>GammaRaySetlist.Model</Name>

@@ -8,46 +8,62 @@ var app = app || {};
     'use strict';
 
     var appVM = function () {
-        var bands = ko.observableArray(),
-            band = ko.observable(),
-            song = ko.observable(),
-            bandList = ko.observableArray(),
+        var _bands = ko.observableArray(),
+            _band = ko.observable(),
+            _song = ko.observable(),
+            _bandList = ko.observableArray(),
 
             newSong = function () {
+                var songItem = {
+                    id: 0,
+                    name: _song(),
+                    listened: false,
+                    band: ko.toJS(_band())
+                };
+
+                addToList(songItem);
+                saveSong(songItem);
+                reset();
+            },
+
+            reset = function () {
+                _song(null);
+                _band(null);
+            },
+
+            addToList = function (song) {
                 var index = -1;
 
-                 _.each(bandList(), function (item, i) {
-                     if (item.id == band().id) {
-                         index = i;
-                         return false;
-                     }
+                _.each(_bandList(), function (item, i) {
+                    if (item.id == _band().id) {
+                        index = i;
+                        return false;
+                    }
                 });
-
-                var songItem = {
-                    name: song(),
-                    listened: false
-                };
 
                 if (index === -1) {
                     var bandItem = {
-                        name: band().name,
-                        id: band().id,
+                        name: _band().name,
+                        id: _band().id,
                         songs: ko.observableArray([
                             songItem
                         ])
                     };
 
-                    bandList.push(bandItem);
+                    _bandList.push(bandItem);
                 } else {
-                    bandList()[index].songs.push(songItem);
+                    _bandList()[index].songs.push(songItem);
                 }
-
-                reset();
             },
 
-            reset = function () {
-                song(null);
-                band(null);
+            saveSong = function (song) {
+
+            },
+
+            updateListened = function (e, f) {
+                console.log(e);
+                console.log(f);
+                return true;
             },
 
             initialize = function () {
@@ -63,17 +79,20 @@ var app = app || {};
                     }
                 ];
 
-                bands(data);
+                _bands(data);
+
+                _bandList.subscribe(updateListened);
             };
 
         initialize();
 
         return {
-            bands: bands,
-            band: band,
-            song: song,
-            bandList: bandList,
-            newSong: newSong
+            bands: _bands,
+            band: _band,
+            song: _song,
+            bandList: _bandList,
+            newSong: newSong,
+            updateListened: updateListened
         };
     };
 

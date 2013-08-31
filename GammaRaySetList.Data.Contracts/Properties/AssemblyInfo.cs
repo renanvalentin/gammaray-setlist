@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GammaRaySetList.Data")]
+[assembly: AssemblyTitle("GammaRaySetList.Data.Contracts")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GammaRaySetList.Data")]
+[assembly: AssemblyProduct("GammaRaySetList.Data.Contracts")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2bd2e9f3-38ff-46df-bd52-2d5114005b74")]
+[assembly: Guid("e1460ed7-2577-46c6-a768-ecbfe6cd8956")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GammaRaySetList.Web.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,9 @@ namespace GammaRaySetList.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            // Ioc (Ninject)
+            IocConfig.RegisterIoc(GlobalConfiguration.Configuration);   
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

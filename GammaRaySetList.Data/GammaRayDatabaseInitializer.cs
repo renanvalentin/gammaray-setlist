@@ -19,7 +19,7 @@ namespace GammaRaySetList.Data
 
         private List<Band> CreateBands()
         {
-            var bands = new Band[] {
+            var bands = new List<Band> {
                 new Band {
                     Name = "Gamma Ray",
                     Songs = new List<Song> {
